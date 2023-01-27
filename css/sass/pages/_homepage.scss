@@ -1,0 +1,253 @@
+// --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
+// Start Style Home Page .............. 
+
+// Start Slider ... 
+.slider
+{
+    blockquote {
+     
+        line-height: 1.7;
+        text-align: center;
+        color: $grayColor;
+        font: {
+            size: 20px;
+            weight: bold;
+            style: italic;
+            family: Tahoma, Arial;
+            width: 80%;
+            margin: 30px auto;
+           }
+        }  
+         img {
+
+             max-width: 100%;
+
+       
+         }
+    .bullets {
+        text-align: center;
+       
+        li {
+           display: inline-block;
+           width: 15px;
+           height: 15px;
+           background-color: $bulletsColor;
+           border-radius: 50%;
+           border: 2px solid $grayColor;
+           cursor: pointer;
+           transition: all 0.2s;
+            &.active,
+            &:hover 
+             {
+             border: 2px solid  $activeBullets;
+             background-color: #fff;
+           }
+        }
+    }
+}
+// End   Slider ... 
+
+// ---------------------------------------------------------------------------
+// Start Services.
+.services 
+{
+
+    .service-box  {
+    
+
+        // media services box ... 
+        @media #{$minMedium} {
+            float: $floatLeft;
+            width: calc(100% / 3);
+            &:not(:last-of-type) {
+                padding-right: 20px;
+            }
+        }
+        @media #{$maxMobile} {
+ 
+            i {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+
+
+        .services-title {
+            color: #666;
+
+            i {
+                font-size: 33px;
+                position: relative;
+                top: 5px;
+            }
+        }
+  
+        .services-desc {
+            color: $grayColor;
+            line-height: 1.5;
+
+        }
+        .services-link {
+            color: $redColor;
+        }
+   
+    }
+}
+// End   Services.
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// Start our players.
+.our-players 
+{
+
+    .players-box  {
+        float: $floatLeft;
+        width: calc(100% / 5);
+          
+        // media query ... 
+        @media #{$minSmall} {
+            float: $floatLeft;
+            width: calc(100% / 2);
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+
+        @media #{$minMedium} {
+            width: calc(100% / 3);
+            text-align: $textLeft;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            
+        }
+
+        @media #{$minLarge} {
+            width: calc(100% / 5);
+         
+        }
+
+        @media #{$maxMobile} {
+            width: 100%;
+            float: none;
+          margin-bottom: 40px;
+         
+        }
+
+        .our-player-img 
+        {
+            max-width: 100%;
+            height: 360px;
+
+        }
+
+
+        .players-title {
+            color: #666;
+            font-weight: normal;
+
+
+            span {
+                font-weight: bold;
+            }
+        }
+  
+        .players-desc {
+            color: $grayColor;
+            line-height: 1.5;
+
+        }
+        .players-link {
+            color: $redColor;
+        }
+   
+    }
+}
+// End   our players.
+// ---------------------------------------------------------------------------
+
+// Start Support Mentor.
+.support-mentor {
+   
+        .container {
+          
+
+        .box-support  {
+            float: $floatLeft;
+            text-align: center;
+            background-color: #fff;
+            transition: all .5s;
+            position: relative;
+            margin: auto;
+            &:not(:last-of-type) 
+            {
+                margin-right:3%;
+            }
+
+            &:hover
+            {
+                @include prefixer(box-shadow,5px 5px 6px #ccc, webkit moz o ms box-shadow);
+             
+            }
+
+            
+
+            .support-img {
+                max-width: 100%;
+                height: 420px;
+            }
+
+        }
+                          
+    }
+}
+
+
+// media query ... 
+@media #{$minSmall} {
+
+    .box-support{
+        float: none;
+        width: calc(100% / 2);
+
+    }
+
+}
+
+@media #{$minMedium} {
+    
+    .box-support{ 
+    
+    width: calc(90% / 1);  
+
+    }
+
+}
+
+
+
+@media #{$maxMobile} {
+
+    .box-support{  
+        width: calc(90% / 1); 
+        margin: 2em 0em;
+       
+}
+}
+
+// End   Support Mentor.
+// ---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// End Style Home Page   .............. 
+// --------------------------------------------------------------------------
+// --------------------------------------------------------------------------

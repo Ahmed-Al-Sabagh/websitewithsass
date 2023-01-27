@@ -1,0 +1,123 @@
+
+// Start Header ... 
+.header 
+{
+    padding: 20px 0px;
+    border-bottom: 1px  solid $grayColor;
+    overflow: hidden;
+
+    .logo 
+    {
+        position: relative;
+        width: 100%;
+        float: $floatLeft;  // Direction 
+        // media query ... 
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @media #{$minMedium} {
+            width: 30%;
+            float: $floatLeft;  // Direction 
+            text-align: $textLeft;
+        }
+    
+    h1 
+    {
+        margin-top: 10px;
+        margin-bottom: 0;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.5s;
+       
+    }
+    
+}
+    h1:hover 
+    {
+        color: $redColor;
+    }
+    p
+    {
+        color: $grayColor;
+    }
+    .navbar
+    {
+        overflow: hidden;
+        width: 100%;
+        float: $floatLeft; // Direction 
+        background-color: $redColor;
+        border-radius: 6rem;
+        @include prefixer(box-shadow,5px 5px 6px #ccc, webkit moz o ms box-shadow);
+
+        // media query ... 
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            margin-top: 2rem;
+            display: block !important;
+            
+        }
+        @media #{$minMedium} {
+            width: 70%;
+            float: $floatLeft;  // Direction 
+            margin-top: 1em;
+
+        }
+
+        // media query ... 
+        @media #{$maxMobile} {
+            display: none;
+            border-radius: 0;
+        }
+
+        li 
+        {
+            width: 20%;
+            float: $floatLeft;
+            font-size: 18px;
+            text-align: center;
+            transition: 0.8s transform;
+
+             // media query ... 
+             @media #{$maxMobile} {
+                float: none;
+                display: block;
+
+                &:hover {
+                    transform: translateX(52px) !important;
+
+                }
+            }
+
+            a {
+                display: block;
+                padding: 20px  10px;
+                color: #fff;
+                transition: 0.3s color;
+                
+               // media query ... 
+              @media #{$maxMobile} {
+                width: 100px;
+                padding: 10px  0px;
+                background-color: white;
+                margin: .3rem 0rem;
+                color: $grayColor;
+        
+
+              }
+
+                &:hover 
+                {
+                    color: $hoverColor;
+                }
+            }
+            
+        }
+    }
+
+}
+
+
+// End   Header ... 

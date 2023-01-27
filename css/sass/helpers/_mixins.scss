@@ -1,0 +1,64 @@
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+// Start Mixins ... 
+// For Media Query ... 
+@mixin minMedium {
+    @media (min-width:992px) {
+        @content;
+     }
+ }
+// End   Mixins ... 
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+
+// Start Mixins ... 
+// For Overlay  ... 
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+ }
+// End   Mixins ... 
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+// Start Mixins ... 
+// For Prefix  ... 
+@mixin prefixer($property,$value,$prefixes:())  {
+
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    #{$property}: $value
+    
+ }
+
+
+// End   Mixins ... 
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+
+// Start Mixins ... 
+// For Animation  ... 
+@mixin animations($animationName)  {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+
+ }
+
+
+// End   Mixins ... 
+// ----------------------------------------------------------
+// ----------------------------------------------------------

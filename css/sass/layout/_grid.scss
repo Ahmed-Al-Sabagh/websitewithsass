@@ -1,0 +1,47 @@
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// include prefixes ...
+* 
+{
+    @include prefixer(box-sizing, border-box, webkit moz);
+}
+// --------------------------------------------------------
+// Start Grid System .... 
+
+.container 
+{
+      margin: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    //   Start Media Query ... 
+    // for small screen ... 
+    @media #{$minSmall} {
+        width: 750px;
+    }
+    // for medium screen ... 
+    @media #{$minMedium} {
+        width: 970px;
+    }
+    // for large screen ... 
+    @media #{$minLarge} {
+
+        width: 1170px;
+    }
+      
+}
+
+.clearFix {
+    clear: both;
+}
+
+.text-center-xs
+    {
+        @media #{$maxMobile} {
+            text-align: center;
+        }   
+    }
+    
+
+
+// End  Grid System .... 
